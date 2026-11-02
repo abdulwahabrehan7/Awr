@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d18" />
+  <meta name="description" content="Abdul Wahab Rehan — IT Associate, Hardware Specialist and Web Developer based in Dubai, UAE." />
+  <title>Abdul Wahab Rehan | IT & Technology Portfolio</title>
+
+  <!-- Tailwind CSS CDN. For production, consider compiling Tailwind locally. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            ink: '#080d18', panel: '#101827', line: '#263449',
+            mint: '#6ee7c2', sky: '#70b8ff'
+          },
+          boxShadow: {
+            glow: '0 0 45px rgba(110,231,194,.12)',
+            card: '0 24px 80px rgba(0,0,0,.28)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { font-family: 'DM Sans', sans-serif; background:#080d18; color:#e8eef7; }
+    h1,h2,h3,.display { font-family:'Space Grotesk',sans-serif; }
+    .bg-grid { background-image:linear-gradient(rgba(132,157,190,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(132,157,190,.055) 1px,transparent 1px);background-size:44px 44px; }
+    .glass { background:rgba(16,24,39,.72); border:1px solid rgba(148,170,199,.15); backdrop-filter:blur(18px); }
+    .gradient-text { background:linear-gradient(100deg,#f4f8ff 10%,#6ee7c2 55%,#70b8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent; }
+    .gradient-border { position:relative; isolation:isolate; }
+    .gradient-border:before { content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(110,231,194,.65),rgba(112,184,255,.08),rgba(110,231,194,.2));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;z-index:-1; }
+    .orb { position:absolute;border-radius:9999px;filter:blur(80px);pointer-events:none;opacity:.22; }
+    .reveal { opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1); }
+    .reveal.visible { opacity:1;transform:translateY(0); }
+    .nav-link { color:#9eacc0;transition:color .2s ease; }
+    .nav-link:hover,.nav-link.active { color:#6ee7c2; }
+    .skill-fill { width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1); }
+    .project-card { transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease; }
+    .project-card:hover { transform:translateY(-7px);border-color:rgba(110,231,194,.38);box-shadow:0 24px 70px rgba(0,0,0,.3); }
+    .float { animation:float 6s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)} }
+    .pulse-dot { box-shadow:0 0 0 0 rgba(110,231,194,.6);animation:pulse 2s infinite; }
+    @keyframes pulse { 70%{box-shadow:0 0 0 9px rgba(110,231,194,0)}100%{box-shadow:0 0 0 0 rgba(110,231,194,0)} }
+    .menu-open { display:flex !important; }
+    ::selection { background:#6ee7c2;color:#07111b; }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body class="overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="orb bg-emerald-400 w-80 h-80 -top-32 -left-20"></div>
+    <div class="orb bg-blue-500 w-96 h-96 top-[38%] -right-48"></div>
+    <div class="absolute inset-0 bg-grid opacity-50"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-ink/20 to-ink"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-ink/75 backdrop-blur-xl">
+    <nav class="max-w-7xl mx-auto px-5 sm:px-8 h-[76px] flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3" aria-label="Abdul Wahab Rehan home">
+        <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-mint to-sky text-ink font-bold grid place-items-center display">a.WR</span>
+        <span class="leading-tight"><span class="block font-semibold text-white">Abdul Wahab Rehan</span><span class="text-[11px] tracking-[.18em] uppercase text-slate-500">IT & Technology</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm">
+        <a class="nav-link active" href="#home">Home</a><a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#experience">Experience</a><a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#education">Education</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-mint text-ink font-bold hover:bg-white transition">Contact me <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
+      </div>
+      <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-xl glass text-white" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden lg:hidden flex-col gap-1 px-5 pb-5 bg-ink/95">
+      <a class="nav-link py-2" href="#home">Home</a><a class="nav-link py-2" href="#about">About</a>
+      <a class="nav-link py-2" href="#experience">Experience</a><a class="nav-link py-2" href="#skills">Skills</a>
+      <a class="nav-link py-2" href="#projects">Projects</a><a class="nav-link py-2" href="#education">Education</a>
+      <a class="nav-link py-2" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative min-h-screen flex items-center pt-28 pb-20">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs sm:text-sm text-slate-300 mb-7">
+            <span class="w-2 h-2 rounded-full bg-mint pulse-dot"></span> Based in Dubai, UAE <span class="text-slate-600">•</span> Available immediately
+          </div>
+          <p class="text-mint text-sm tracking-[.24em] uppercase font-semibold mb-4">Hello, I'm</p>
+          <h1 class="display text-5xl sm:text-6xl lg:text-[76px] leading-[1.04] font-bold tracking-tight">Abdul Wahab<br><span class="gradient-text">Rehan.</span></h1>
+          <p class="mt-7 text-xl sm:text-2xl text-slate-300 font-medium">IT Associate <span class="text-slate-600">/</span> Hardware Specialist</p>
+          <p class="mt-5 max-w-2xl text-slate-400 leading-8 text-base sm:text-lg">I keep technology dependable — from enterprise IT support and system administration to custom PC builds and modern web experiences.</p>
+          <div class="flex flex-wrap gap-3 mt-9">
+            <a href="#projects" class="inline-flex items-center gap-3 rounded-full bg-mint text-ink px-6 py-3.5 font-bold hover:bg-white transition">Explore my work <i class="fa-solid fa-arrow-down"></i></a>
+            <a href="assets/Abdul_Wahab_Rehan_CV9.pdf" download class="inline-flex items-center gap-3 rounded-full border border-slate-600 px-6 py-3.5 font-semibold text-white hover:border-mint hover:text-mint transition"><i class="fa-solid fa-download"></i> Download CV</a>
+          </div>
+          <div class="flex items-center gap-5 mt-10 text-slate-400">
+            <a class="hover:text-mint transition text-lg" href="https://www.linkedin.com/in/abdul-wahab-rehan-97512423b" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="hover:text-mint transition text-lg" href="mailto:abdulwahabrehan7@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            <a class="hover:text-mint transition text-lg" href="tel:+971501802632" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+            <span class="h-5 w-px bg-slate-700"></span><span class="text-xs tracking-wide">Open to opportunities across the UAE</span>
+          </div>
+        </div>
+        <div class="relative reveal" style="transition-delay:150ms">
+          <div class="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-mint/10 to-blue-500/10 blur-2xl"></div>
+          <div class="relative glass gradient-border rounded-[2rem] p-5 sm:p-7 shadow-glow">
+            <div class="flex justify-between items-center mb-6"><span class="text-xs tracking-[.2em] uppercase text-slate-500">Technology profile</span><span class="text-xs text-mint"><i class="fa-solid fa-circle-check mr-1"></i> Active</span></div>
+            <div class="rounded-2xl overflow-hidden h-56 sm:h-64 relative">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1100&q=85" alt="Detailed computer motherboard and technology components" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent"></div>
+              <div class="absolute bottom-5 left-5"><p class="text-white text-xl font-semibold">Technology that works.</p><p class="text-slate-300 text-sm mt-1">Support · Systems · Hardware · Web</p></div>
+            </div>
+            <div class="grid grid-cols-3 gap-3 mt-5">
+              <div class="rounded-xl bg-white/[.04] p-4"><p class="text-2xl display font-bold text-mint">17<span class="text-sm">+</span></p><p class="text-[11px] text-slate-500 mt-1">Months experience</p></div>
+              <div class="rounded-xl bg-white/[.04] p-4"><p class="text-2xl display font-bold text-mint">4</p><p class="text-[11px] text-slate-500 mt-1">Core domains</p></div>
+              <div class="rounded-xl bg-white/[.04] p-4"><p class="text-2xl display font-bold text-mint">UAE</p><p class="text-[11px] text-slate-500 mt-1">Based in Dubai</p></div>
+            </div>
+            <div class="mt-5 flex items-center justify-between text-xs text-slate-500"><span><i class="fa-solid fa-location-dot text-mint mr-2"></i>Dubai, United Arab Emirates</span><span>2026</span></div>
+          </div>
+          <div class="absolute -right-5 -top-7 float glass rounded-2xl px-4 py-3 hidden sm:block"><i class="fa-solid fa-microchip text-mint mr-2"></i><span class="text-sm font-semibold">Hardware & IT</span></div>
+          <div class="absolute -left-8 bottom-12 float glass rounded-2xl px-4 py-3 hidden sm:block" style="animation-delay:-2s"><i class="fa-solid fa-code text-sky mr-2"></i><span class="text-sm font-semibold">Web projects</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 sm:py-28 border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="max-w-3xl reveal"><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">A little about me</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Practical thinking.<br><span class="gradient-text">Reliable technology.</span></h2></div>
+        <div class="grid lg:grid-cols-2 gap-12 mt-12 items-start">
+          <div class="reveal"><p class="text-slate-400 leading-8 text-lg">I'm an IT Associate and Hardware Specialist with hands-on experience supporting enterprise users, maintaining systems, troubleshooting software and networks, and building custom PCs. I enjoy solving technical problems methodically and making technology easier and more reliable for the people who use it.</p><p class="text-slate-400 leading-8 mt-5">Alongside IT operations, I build responsive web projects using modern frontend technologies. My approach combines attention to detail, clear communication, and a strong focus on practical outcomes.</p>
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+              <div class="glass rounded-2xl p-5"><i class="fa-solid fa-screwdriver-wrench text-mint text-xl"></i><h3 class="font-semibold mt-3">Hands-on problem solving</h3><p class="text-sm text-slate-500 mt-2">Troubleshooting across hardware, operating systems and networks.</p></div>
+              <div class="glass rounded-2xl p-5"><i class="fa-solid fa-users text-sky text-xl"></i><h3 class="font-semibold mt-3">User-first support</h3><p class="text-sm text-slate-500 mt-2">Clear communication and dependable end-user assistance.</p></div>
+            </div>
+          </div>
+          <div class="glass rounded-3xl p-7 sm:p-9 reveal">
+            <h3 class="display text-2xl font-semibold">Quick profile</h3>
+            <div class="mt-7 space-y-5 text-sm">
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><span class="text-slate-500">Location</span><span class="text-right text-slate-200">Dubai, UAE</span></div>
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><span class="text-slate-500">Nationality</span><span class="text-right text-slate-200">Indian</span></div>
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><span class="text-slate-500">Visa status</span><span class="text-right text-slate-200">Visit Visa</span></div>
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><span class="text-slate-500">Availability</span><span class="text-right text-mint">Immediate</span></div>
+              <div class="flex justify-between gap-5 border-b border-white/10 pb-4"><span class="text-slate-500">Languages</span><span class="text-right text-slate-200">English, Hindi, Urdu</span></div>
+              <div class="flex justify-between gap-5"><span class="text-slate-500">Email</span><a class="text-right text-mint hover:underline" href="mailto:abdulwahabrehan7@gmail.com">abdulwahabrehan7@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-24 sm:py-28 bg-white/[.018] border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="reveal"><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">Career journey</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Experience that <span class="gradient-text">delivers.</span></h2></div>
+        <div class="mt-14 max-w-5xl">
+          <article class="relative pl-8 sm:pl-12 pb-14 border-l border-slate-700 reveal">
+            <span class="absolute -left-[7px] top-1 w-3.5 h-3.5 rounded-full bg-mint ring-4 ring-ink"></span>
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+              <div><p class="text-mint text-xs uppercase tracking-[.18em] font-semibold">December 2024 — May 2026</p><h3 class="display text-2xl sm:text-3xl font-semibold mt-2">IT Associate</h3><p class="text-slate-400 mt-1">Wipro <span class="text-slate-600">·</span> Hyderabad, Telangana</p></div>
+              <span class="text-xs rounded-full border border-mint/25 text-mint px-3 py-1.5 w-fit">Enterprise IT Support</span>
+            </div>
+            <ul class="mt-7 grid sm:grid-cols-2 gap-x-10 gap-y-4 text-slate-400 text-sm leading-6">
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Provided IT support to enterprise users, helping minimize downtime.</li>
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Diagnosed Windows, Linux and macOS, network, VPN and software issues.</li>
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Managed support tickets through ITSM systems and tracked resolutions.</li>
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Managed user accounts and access using Active Directory and Microsoft 365.</li>
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Supported basic script debugging, application testing and system checks.</li>
+              <li><i class="fa-solid fa-check text-mint mr-2"></i>Performed workstation imaging, software installation, maintenance and updates.</li>
+              <li class="sm:col-span-2"><i class="fa-solid fa-check text-mint mr-2"></i>Created technical documentation and troubleshooting guides for the knowledge base.</li>
+            </ul>
+          </article>
+          <article class="relative pl-8 sm:pl-12 reveal">
+            <span class="absolute -left-[7px] top-1 w-3.5 h-3.5 rounded-full bg-sky ring-4 ring-ink"></span>
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+              <div><p class="text-sky text-xs uppercase tracking-[.18em] font-semibold">August 2023 — October 2024</p><h3 class="display text-2xl sm:text-3xl font-semibold mt-2">PC Builder & Hardware Specialist</h3><p class="text-slate-400 mt-1">Apex Systems & Hardware <span class="text-slate-600">·</span> Hyderabad, Telangana</p></div>
+              <span class="text-xs rounded-full border border-sky/25 text-sky px-3 py-1.5 w-fit">Hardware & Workstations</span>
+            </div>
+            <ul class="mt-7 grid sm:grid-cols-2 gap-x-10 gap-y-4 text-slate-400 text-sm leading-6">
+              <li><i class="fa-solid fa-check text-sky mr-2"></i>Assembled, configured and tested custom desktop PCs and workstations.</li>
+              <li><i class="fa-solid fa-check text-sky mr-2"></i>Performed component diagnostics, stress testing and thermal analysis.</li>
+              <li><i class="fa-solid fa-check text-sky mr-2"></i>Handled BIOS and firmware updates, OS setup and driver configuration.</li>
+              <li><i class="fa-solid fa-check text-sky mr-2"></i>Installed software and delivered hands-on technical support.</li>
+              <li class="sm:col-span-2"><i class="fa-solid fa-check text-sky mr-2"></i>Worked directly with customers to troubleshoot hardware faults, recommend upgrades and deliver end-to-end solutions.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="reveal"><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">What I work with</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Technical <span class="gradient-text">toolkit.</span></h2><p class="text-slate-400 mt-4 max-w-2xl leading-7">A practical mix of enterprise support, hardware, systems, networking and frontend development.</p></div>
+        <div class="grid md:grid-cols-2 gap-5 mt-12">
+          <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3 mb-7"><span class="w-11 h-11 rounded-xl bg-mint/10 text-mint grid place-items-center"><i class="fa-solid fa-computer"></i></span><h3 class="display text-xl font-semibold">Hardware & Systems</h3></div>
+            <div class="space-y-5">
+              <div><div class="flex justify-between text-sm mb-2"><span>Custom PC Building</span><span class="text-slate-500">Strong</span></div><div class="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div class="skill-fill h-full bg-mint rounded-full" data-width="92%"></div></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><span>Component Diagnostics</span><span class="text-slate-500">Strong</span></div><div class="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div class="skill-fill h-full bg-mint rounded-full" data-width="88%"></div></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><span>Workstation Imaging</span><span class="text-slate-500">Proficient</span></div><div class="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div class="skill-fill h-full bg-mint rounded-full" data-width="82%"></div></div></div>
+              <div><div class="flex justify-between text-sm mb-2"><span>Thermal Testing & BIOS</span><span class="text-slate-500">Proficient</span></div><div class="h-1.5 bg-slate-700 rounded-full overflow-hidden"><div class="skill-fill h-full bg-mint rounded-full" data-width="80%"></div></div></div>
+            </div>
+          </div>
+          <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3 mb-7"><span class="w-11 h-11 rounded-xl bg-sky/10 text-sky grid place-items-center"><i class="fa-solid fa-network-wired"></i></span><h3 class="display text-xl font-semibold">IT Admin & Networking</h3></div>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="skill-chip">Active Directory</span><span class="skill-chip">Microsoft 365</span><span class="skill-chip">ITSM / Helpdesk</span><span class="skill-chip">Access Management</span><span class="skill-chip">TCP/IP</span><span class="skill-chip">DNS</span><span class="skill-chip">VPN Configuration</span><span class="skill-chip">Windows</span><span class="skill-chip">Linux</span><span class="skill-chip">macOS</span>
+            </div>
+            <div class="mt-8 rounded-xl bg-white/[.035] p-4 text-sm text-slate-400 leading-6"><i class="fa-solid fa-circle-info text-sky mr-2"></i>Focused on dependable system access, endpoint support and practical troubleshooting.</div>
+          </div>
+          <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3 mb-7"><span class="w-11 h-11 rounded-xl bg-purple-400/10 text-purple-300 grid place-items-center"><i class="fa-solid fa-code"></i></span><h3 class="display text-xl font-semibold">Software & Web</h3></div>
+            <div class="flex flex-wrap gap-2.5">
+              <span class="skill-chip">HTML5</span><span class="skill-chip">CSS3</span><span class="skill-chip">JavaScript</span><span class="skill-chip">ReactJS</span><span class="skill-chip">Tailwind CSS</span><span class="skill-chip">Software Deployment Basics</span><span class="skill-chip">API Integration</span>
+            </div>
+          </div>
+          <div class="glass rounded-2xl p-6 sm:p-8 reveal">
+            <div class="flex items-center gap-3 mb-7"><span class="w-11 h-11 rounded-xl bg-amber-400/10 text-amber-300 grid place-items-center"><i class="fa-solid fa-certificate"></i></span><h3 class="display text-xl font-semibold">Certification & Languages</h3></div>
+            <div class="text-sm text-slate-300"><p class="font-semibold">Full Stack Development</p><p class="text-slate-500 mt-1">NASSCOM · 2024</p></div>
+            <div class="h-px bg-white/10 my-5"></div><p class="text-xs uppercase tracking-widest text-slate-500 mb-3">Languages</p><div class="flex flex-wrap gap-2"><span class="skill-chip">English</span><span class="skill-chip">Hindi</span><span class="skill-chip">Urdu</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-24 sm:py-28 bg-white/[.018] border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-5 reveal"><div><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">Selected work</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Projects in <span class="gradient-text">action.</span></h2></div><p class="text-slate-400 max-w-md leading-7">A selection of web experiences exploring travel discovery and automotive technology.</p></div>
+        <div class="grid lg:grid-cols-2 gap-6 mt-12">
+          <article class="project-card glass rounded-3xl overflow-hidden reveal">
+            <div class="h-56 sm:h-64 relative overflow-hidden"><img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=85" alt="Airplane wing above clouds overlooking a travel destination" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent"></div><span class="absolute top-5 left-5 text-xs rounded-full bg-ink/75 backdrop-blur px-3 py-1.5 text-mint">Travel platform</span></div>
+            <div class="p-7 sm:p-8"><div class="flex justify-between items-start gap-4"><div><h3 class="display text-2xl font-bold">Toursaza</h3><p class="text-slate-400 mt-2 leading-7">A travel discovery website designed to help users explore destinations, discover tours and plan their next adventure.</p></div><span class="text-mint text-2xl"><i class="fa-solid fa-plane-departure"></i></span></div><div class="flex flex-wrap gap-2 mt-5"><span class="tech-chip">HTML</span><span class="tech-chip">Tailwind CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">REST API</span></div><div class="flex flex-wrap gap-4 mt-7"><a id="toursazaLink" href="https://abdulwahabrehan7.github.io/Toursaza/" target="_blank" rel="noreferrer" class="text-sm font-semibold text-mint hover:text-white transition">View live project <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a><a href="https://github.com/YOUR-GITHUB-USERNAME/toursaza" target="_blank" rel="noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition">Source code <i class="fa-brands fa-github ml-1"></i></a></div></div>
+          </article>
+          <article class="project-card glass rounded-3xl overflow-hidden reveal">
+            <div class="h-56 sm:h-64 relative overflow-hidden"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Modern premium car on a road" class="w-full h-full object-cover transition duration-700 hover:scale-105"><div class="absolute inset-0 bg-gradient-to-t from-panel via-transparent to-transparent"></div><span class="absolute top-5 left-5 text-xs rounded-full bg-ink/75 backdrop-blur px-3 py-1.5 text-sky">Automotive technology</span></div>
+            <div class="p-7 sm:p-8"><div class="flex justify-between items-start gap-4"><div><h3 class="display text-2xl font-bold">AutoWorth</h3><p class="text-slate-400 mt-2 leading-7">A used-car valuation concept with vehicle identity lookup, interactive pricing inputs and an AED-focused valuation experience.</p></div><span class="text-sky text-2xl"><i class="fa-solid fa-car-side"></i></span></div><div class="flex flex-wrap gap-2 mt-5"><span class="tech-chip">HTML</span><span class="tech-chip">Tailwind CSS</span><span class="tech-chip">JavaScript</span><span class="tech-chip">NHTSA vPIC API</span></div><div class="flex flex-wrap gap-4 mt-7"><a id="autoworthLink" href="https://abdulwahabrehan7.github.io/Autoworth/" target="_blank" rel="noreferrer" class="text-sm font-semibold text-mint hover:text-white transition">View live project <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i></a><a href="https://github.com/YOUR-GITHUB-USERNAME/autoworth-car-predictor" target="_blank" rel="noreferrer" class="text-sm font-semibold text-slate-400 hover:text-white transition">Source code <i class="fa-brands fa-github ml-1"></i></a></div></div>
+          </article>
+        </div>
+        <p class="text-xs text-slate-500 mt-5"><i class="fa-solid fa-circle-info mr-1"></i> Replace the sample GitHub username in the project links with your actual GitHub username after publishing.</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="py-24 sm:py-28">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="reveal"><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">Learning foundation</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Education & <span class="gradient-text">credentials.</span></h2></div>
+        <div class="grid md:grid-cols-2 gap-6 mt-12">
+          <div class="glass rounded-2xl p-7 reveal"><div class="w-12 h-12 rounded-xl bg-mint/10 text-mint grid place-items-center text-xl"><i class="fa-solid fa-graduation-cap"></i></div><p class="text-xs text-mint tracking-widest uppercase mt-6">2019 — 2023</p><h3 class="display text-2xl font-semibold mt-2">B.E. in Computer Science Engineering</h3><p class="text-slate-400 mt-2">Osmania University</p></div>
+          <div class="glass rounded-2xl p-7 reveal"><div class="w-12 h-12 rounded-xl bg-sky/10 text-sky grid place-items-center text-xl"><i class="fa-solid fa-award"></i></div><p class="text-xs text-sky tracking-widest uppercase mt-6">2024</p><h3 class="display text-2xl font-semibold mt-2">Full Stack Development</h3><p class="text-slate-400 mt-2">NASSCOM Certification</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 sm:py-28 bg-white/[.018] border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-20">
+          <div class="reveal"><p class="text-mint text-xs tracking-[.25em] uppercase font-bold">Let's connect</p><h2 class="display text-4xl sm:text-5xl font-bold mt-4">Have an opportunity?<br><span class="gradient-text">Let's talk.</span></h2><p class="text-slate-400 leading-7 mt-6 max-w-md">For opportunities, collaborations or a conversation about technology, send me a message. I'll be happy to connect.</p>
+            <div class="space-y-5 mt-10">
+              <a href="mailto:abdulwahabrehan7@gmail.com" class="flex items-center gap-4 group"><span class="w-12 h-12 glass rounded-xl grid place-items-center text-mint"><i class="fa-regular fa-envelope"></i></span><span><span class="block text-xs text-slate-500">Email</span><span class="text-sm sm:text-base group-hover:text-mint transition">abdulwahabrehan7@gmail.com</span></span></a>
+              <a href="tel:+971501802632" class="flex items-center gap-4 group"><span class="w-12 h-12 glass rounded-xl grid place-items-center text-mint"><i class="fa-solid fa-phone"></i></span><span><span class="block text-xs text-slate-500">Phone / WhatsApp</span><span class="text-sm sm:text-base group-hover:text-mint transition">+971 50 180 2632</span></span></a>
+              <a href="https://www.linkedin.com/in/abdul-wahab-rehan-97512423b" target="_blank" rel="noreferrer" class="flex items-center gap-4 group"><span class="w-12 h-12 glass rounded-xl grid place-items-center text-mint"><i class="fa-brands fa-linkedin-in"></i></span><span><span class="block text-xs text-slate-500">LinkedIn</span><span class="text-sm sm:text-base group-hover:text-mint transition">Connect with me</span></span></a>
+            </div>
+          </div>
+          <div class="glass rounded-3xl p-6 sm:p-9 reveal">
+            <div class="flex items-center justify-between gap-3 mb-7"><h3 class="display text-2xl font-semibold">Send a message</h3><span class="text-xs text-slate-500"><i class="fa-solid fa-lock text-mint mr-1"></i> Direct email delivery</span></div>
+            <form id="contactForm" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <label class="block"><span class="text-sm text-slate-300">Your name</span><input required name="from_name" autocomplete="name" class="form-input mt-2" placeholder="Name"></label>
+                <label class="block"><span class="text-sm text-slate-300">Your email</span><input required type="email" name="reply_to" autocomplete="email" class="form-input mt-2" placeholder="name@example.com"></label>
+              </div>
+              <label class="block"><span class="text-sm text-slate-300">Subject</span><input required name="subject" class="form-input mt-2" placeholder="What would you like to discuss?"></label>
+              <label class="block"><span class="text-sm text-slate-300">Message</span><textarea required name="message" rows="5" class="form-input mt-2 resize-y" placeholder="Write your message..."></textarea></label>
+              <button id="sendBtn" type="submit" class="w-full sm:w-auto rounded-full bg-mint text-ink font-bold px-7 py-3.5 hover:bg-white transition disabled:opacity-60"><span id="sendText">Send message</span> <i class="fa-solid fa-paper-plane ml-2"></i></button>
+              <p id="formStatus" class="text-sm text-slate-400" role="status" aria-live="polite">Please configure EmailJS using the instructions in README.md to enable direct delivery.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row gap-4 justify-between items-center text-xs text-slate-500"><p>© <span id="year"></span> Abdul Wahab Rehan. Built with care.</p><a href="#home" class="hover:text-mint transition">Back to top <i class="fa-solid fa-arrow-up ml-1"></i></a></div>
+  </footer>
+
+  <button id="toTop" class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-mint text-ink shadow-glow opacity-0 pointer-events-none translate-y-3 transition" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <style>
+    .skill-chip,.tech-chip{display:inline-flex;align-items:center;border:1px solid rgba(148,170,199,.17);background:rgba(255,255,255,.045);color:#b8c4d5;border-radius:999px;padding:8px 13px;font-size:12px}
+    .tech-chip{padding:6px 10px;font-size:11px}
+    .form-input{display:block;width:100%;background:rgba(4,10,20,.55);border:1px solid #2a394e;border-radius:12px;padding:13px 15px;color:#edf4ff;outline:none;transition:border-color .2s,box-shadow .2s;font-size:14px}
+    .form-input::placeholder{color:#617086}
+    .form-input:focus{border-color:#6ee7c2;box-shadow:0 0 0 3px rgba(110,231,194,.1)}
+  </style>
+
+  <!-- EmailJS SDK: fill in your public key / service ID / template ID in script.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
